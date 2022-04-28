@@ -1,0 +1,12 @@
+<h2>2048 Game</h2>
+<h4>Grid Size: {{gridSize}}</h4>
+
+<div>
+    <table class="gameTable">
+        <tr *ngFor="let item of gameGrid;let i = index">
+            <td *ngFor="let item of gameGrid[i];let j = index" [ngStyle]="{'background-color': getColor(item)}">
+                {{item}}
+            </td>
+        </tr>
+    </table>
+</div>
